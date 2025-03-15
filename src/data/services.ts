@@ -7,7 +7,7 @@ export const services: Service[] = [
       "In-depth data analysis, customer behavior insights, predictive analytics, and marketing performance reports.",
     icon: "LineChart",
     cta: "Discover Insights",
-    imageId: "1551288049-bebda4e38f71",
+    imageId: "1517245386807-bb43f82c33c4",
   },
   {
     title: "Custom AI-Powered Automation",
@@ -15,7 +15,7 @@ export const services: Service[] = [
       "Automate email campaigns, lead nurturing, customer segmentation, and content recommendations powered by AI.",
     icon: "Bot",
     cta: "Get Automated Today",
-    imageId: "1550305080-4e029753abcf",
+    imageId: "1485827404703-89b55fcc595e",
   },
   {
     title: "Personalized Marketing Solutions",
@@ -23,7 +23,7 @@ export const services: Service[] = [
       "Tailored marketing strategies that evolve with customer behavior. Includes A/B testing and ongoing optimizations.",
     icon: "Target",
     cta: "Personalize Your Strategy",
-    imageId: "1460925895917-afdab827c52f",
+    imageId: "1432888498266-38ffec3eaf0a",
   },
   {
     title: "Augmented Reality & Virtual Reality",
@@ -39,7 +39,7 @@ export const services: Service[] = [
       "AI-powered platform to discover the best influencers, optimize partnerships, and track performance in real-time.",
     icon: "Users",
     cta: "Find the Right Influencers",
-    imageId: "1557426272-fc759fdf7a8d",
+    imageId: "1573496359142-b8d87734a5a2",
   },
   {
     title: "Creative Content Development",
@@ -47,7 +47,7 @@ export const services: Service[] = [
       "Automated content generation for blogs, social media, and videos using advanced AI tools.",
     icon: "FileText",
     cta: "Create Quality Content",
-    imageId: "1552664730-d307ca884978",
+    imageId: "1542744173-8e7e53415bb0",
   },
   {
     title: "Cloud-Based Marketing Platforms",
@@ -55,7 +55,7 @@ export const services: Service[] = [
       "Custom-built cloud marketing solutions integrating CRM, email marketing, social media, and more.",
     icon: "Cloud",
     cta: "Get Your Custom Platform",
-    imageId: "1451187580459-43490279c0fa",
+    imageId: "1484417894907-623942c8ee29",
   },
   {
     title: "Programmatic Advertising",
@@ -63,6 +63,6 @@ export const services: Service[] = [
       "Real-time programmatic ad optimization, targeting, and bidding adjustments using AI.",
     icon: "Target",
     cta: "Maximize Ad Performance",
-    imageId: "1553877522-43269d4ea984",
+    imageId: "1504868584819-f8e8b4b6d7e3",
   },
 ];

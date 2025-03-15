@@ -3,64 +3,64 @@ import { Zap, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-black/50 backdrop-blur-lg border-t border-white/10 text-white">
+    <footer className="glass-card border-t border-white/10 text-white">
       <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <HashLink to="/#" className="flex items-center space-x-2">
-              <Zap className="w-8 h-8 text-purple-500" />
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+              <Zap className="w-8 h-8 text-primary" />
+              <span className="text-2xl font-bold gradient-text">
                 InnoBoost
               </span>
             </HashLink>
-            <p className="mt-4 text-gray-400">
+            <p className="mt-4 text-gray-300">
               Transform your marketing with cutting-edge technology and
               AI-driven solutions.
             </p>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <div className="flex flex-col space-y-2">
+            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
+            <div className="grid grid-cols-2 gap-4">
               <HashLink
                 smooth
                 to="/#services"
-                className="text-gray-400 hover:text-purple-400 transition"
+                className="text-gray-300 hover:text-primary transition"
               >
                 Services
               </HashLink>
               <HashLink
                 smooth
                 to="/#features"
-                className="text-gray-400 hover:text-purple-400 transition"
+                className="text-gray-300 hover:text-primary transition"
               >
                 Features
               </HashLink>
               <HashLink
                 smooth
                 to="/#pricing"
-                className="text-gray-400 hover:text-purple-400 transition"
+                className="text-gray-300 hover:text-primary transition"
               >
                 Pricing
               </HashLink>
               <HashLink
                 smooth
                 to="/#contact"
-                className="text-gray-400 hover:text-purple-400 transition"
+                className="text-gray-300 hover:text-primary transition"
               >
                 Contact
               </HashLink>
               <HashLink
                 smooth
                 to="/privacy/#"
-                className="text-gray-400 hover:text-purple-400 transition"
+                className="text-gray-300 hover:text-primary transition"
               >
                 Privacy Policy
               </HashLink>
               <HashLink
                 smooth
                 to="/terms/#"
-                className="text-gray-400 hover:text-purple-400 transition"
+                className="text-gray-300 hover:text-primary transition"
               >
                 Terms of Service
               </HashLink>
@@ -68,21 +68,21 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <div className="flex flex-col space-y-2 text-gray-400">
-              <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5" />
+            <h3 className="text-lg font-semibold mb-6">Contact</h3>
+            <div className="space-y-4 text-gray-300">
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-primary" />
                 <span>contact@innoboost.com</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5" />
+              <div className="flex items-center space-x-3">
+                <MapPin className="w-5 h-5 text-primary" />
                 <span>123 Innovation Street, Tech City</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-white/10 text-center text-gray-400">
+        <div className="mt-12 pt-8 border-t border-white/10 text-center text-gray-400">
           <p>
             &copy; {new Date().getFullYear()} InnoBoost. All rights reserved.
           </p>

@@ -71,12 +71,15 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Contact</h3>
             <div className="space-y-4 text-gray-300">
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-primary" />
-                <span>contact@innoboost.com</span>
+                <Mail className="w-5 min-w-5 h-5 text-primary" />
+                <span>office@innoboost.io</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-primary" />
-                <span>123 Innovation Street, Tech City</span>
+                <MapPin className="w-5 min-w-5 h-5 text-primary" />
+                <span>
+                  Victoria House, Office D, Suite 21/22, 26 Main Street,
+                  Gibraltar, GX11 1AA
+                </span>
               </div>
             </div>
           </div>

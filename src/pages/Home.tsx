@@ -111,94 +111,152 @@ const Home = () => {
             your marketing efforts with our AI-powered solutions.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {/* Basic Plan */}
-            <div className="glass-card rounded-2xl p-8 relative group hover:scale-105 transition duration-300">
-              <h3 className="text-xl font-semibold mb-2">Basic</h3>
-              <div className="text-3xl font-bold mb-4">
-                $99<span className="text-lg text-gray-400">/mo</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            {/* Get Started Plan */}
+            <div className="glass-card rounded-2xl p-8 relative group hover:scale-105 transition duration-300 flex flex-col">
+              <div>
+                <div className="text-sm text-gray-400 mb-4">
+                  Get started plan
+                </div>
+                <h3 className="text-3xl font-bold mb-2">40 hrs</h3>
+                <div className="text-sm text-gray-400 mb-4">/ mo</div>
+                <div className="text-2xl font-bold mb-1">$3200</div>
+                <div className="text-sm text-gray-400 mb-8">$80/hr</div>
+                <ul className="space-y-4 mb-8">
+                  {[
+                    "Basic Analytics Dashboard",
+                    "Email Marketing Setup",
+                    "5 Marketing Campaigns",
+                    "Basic Support",
+                  ].map((feature, index) => (
+                    <li key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 min-w-5 h-5 text-primary" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className="space-y-4 mb-8">
-                {[
-                  "Basic Analytics",
-                  "Email Automation",
-                  "5 Marketing Campaigns",
-                  "Basic Support",
-                ].map((feature, index) => (
-                  <li key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    <span className="text-gray-300">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <HashLink
-                smooth
-                to="/#contact"
-                className="w-full bg-gradient-to-r from-primary to-accent text-white py-3 rounded-xl hover:opacity-90 transition block text-center"
-              >
-                Get Started
-              </HashLink>
+              <div className="mt-auto">
+                <HashLink
+                  smooth
+                  to="/#contact"
+                  className="w-full bg-gradient-to-r from-primary to-accent text-white py-3 rounded-xl hover:opacity-90 transition block text-center"
+                >
+                  Get Started
+                </HashLink>
+              </div>
             </div>
 
-            {/* Pro Plan */}
-            <div className="glass-card rounded-2xl p-8 relative group hover:scale-105 transition duration-300 border-2 border-primary">
+            {/* Boost Plan */}
+            <div className="glass-card rounded-2xl p-8 relative group hover:scale-105 transition duration-300 flex flex-col">
+              <div>
+                <div className="text-sm text-gray-400 mb-4">Boost plan</div>
+                <h3 className="text-3xl font-bold mb-2">80 hrs</h3>
+                <div className="text-sm text-gray-400 mb-4">/ mo</div>
+                <div className="text-2xl font-bold mb-1">$5600</div>
+                <div className="text-sm text-gray-400 mb-8">$70/hr</div>
+                <ul className="space-y-4 mb-8">
+                  {[
+                    "Advanced Analytics",
+                    "Marketing Automation",
+                    "15 Marketing Campaigns",
+                    "Priority Support",
+                    "Custom Integrations",
+                  ].map((feature, index) => (
+                    <li key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 min-w-5 h-5 text-primary" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-auto">
+                <HashLink
+                  smooth
+                  to="/#contact"
+                  className="w-full bg-gradient-to-r from-primary to-accent text-white py-3 rounded-xl hover:opacity-90 transition block text-center"
+                >
+                  Get Started
+                </HashLink>
+              </div>
+            </div>
+
+            {/* Full Force Plan */}
+            <div className="glass-card rounded-2xl p-8 relative group hover:scale-105 transition duration-300 border-2 border-primary flex flex-col">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-primary to-accent text-white px-4 py-1 rounded-full text-sm">
                 Most Popular
               </div>
-              <h3 className="text-xl font-semibold mb-2">Pro</h3>
-              <div className="text-3xl font-bold mb-4">
-                $199<span className="text-lg text-gray-300">/mo</span>
+              <div>
+                <div className="text-sm text-gray-400 mb-4">
+                  Full force plan
+                </div>
+                <h3 className="text-3xl font-bold mb-2">160 hrs</h3>
+                <div className="text-sm text-gray-400 mb-4">/ mo</div>
+                <div className="text-2xl font-bold mb-1">$9600</div>
+                <div className="text-sm text-gray-400 mb-8">$60/hr</div>
+                <ul className="space-y-4 mb-8">
+                  {[
+                    "Full Analytics Suite",
+                    "Advanced AI Automation",
+                    "Unlimited Campaigns",
+                    "24/7 Priority Support",
+                    "Custom Development",
+                    "Strategy Consulting",
+                  ].map((feature, index) => (
+                    <li key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 min-w-5 h-5 text-primary" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className="space-y-4 mb-8">
-                {[
-                  "Advanced Analytics",
-                  "AI-Powered Automation",
-                  "15 Marketing Campaigns",
-                  "Priority Support",
-                  "Custom Integrations",
-                ].map((feature, index) => (
-                  <li key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    <span className="text-gray-300">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <HashLink
-                smooth
-                to="/#contact"
-                className="w-full bg-gradient-to-r from-primary to-accent text-white py-3 rounded-xl hover:opacity-90 transition block text-center"
-              >
-                Get Started
-              </HashLink>
+              <div className="mt-auto">
+                <HashLink
+                  smooth
+                  to="/#contact"
+                  className="w-full bg-gradient-to-r from-primary to-accent text-white py-3 rounded-xl hover:opacity-90 transition block text-center"
+                >
+                  Get Started
+                </HashLink>
+              </div>
             </div>
 
-            {/* Enterprise Plan */}
-            <div className="glass-card rounded-2xl p-8 relative group hover:scale-105 transition duration-300">
-              <h3 className="text-xl font-semibold mb-2">Enterprise</h3>
-              <div className="text-3xl font-bold mb-4">
-                Custom<span className="text-lg text-gray-400">/mo</span>
+            {/* All Inclusive Plan */}
+            <div className="glass-card rounded-2xl p-8 relative group hover:scale-105 transition duration-300 flex flex-col">
+              <div>
+                <div className="text-sm text-gray-400 mb-4">
+                  👑 All inclusive
+                </div>
+                <h3 className="text-3xl font-bold mb-2">Custom</h3>
+                <div className="text-sm text-gray-400 mb-4">/ mo</div>
+                <div className="text-2xl font-bold mb-1">$20K-100K</div>
+                <div className="text-sm text-gray-400 mb-8">/ mo</div>
+                <ul className="space-y-4 mb-8">
+                  {[
+                    "Enterprise Analytics",
+                    "Custom AI Solutions",
+                    "Unlimited Everything",
+                    "Dedicated Team",
+                    "Strategic Partnership",
+                    "White Label Options",
+                    "Custom Development",
+                  ].map((feature, index) => (
+                    <li key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 min-w-5 h-5 text-primary" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className="space-y-4 mb-8">
-                {[
-                  "Full Analytics Suite",
-                  "Custom AI Solutions",
-                  "Unlimited Campaigns",
-                  "24/7 Dedicated Support",
-                  "Custom Development",
-                ].map((feature, index) => (
-                  <li key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    <span className="text-gray-300">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <HashLink
-                smooth
-                to="/#contact"
-                className="w-full bg-gradient-to-r from-primary to-accent text-white py-3 rounded-xl hover:opacity-90 transition block text-center"
-              >
-                Contact Sales
-              </HashLink>
+              <div className="mt-auto">
+                <HashLink
+                  smooth
+                  to="/#contact"
+                  className="w-full bg-gradient-to-r from-primary to-accent text-white py-3 rounded-xl hover:opacity-90 transition block text-center"
+                >
+                  Contact Sales
+                </HashLink>
+              </div>
             </div>
           </div>
         </div>

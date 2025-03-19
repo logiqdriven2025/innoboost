@@ -70,9 +70,10 @@ const Terms = () => {
             <p className="text-gray-300">
               For any questions about these Terms, please contact us at:
               <br />
-              Email: legal@innoboost.com
+              Email: office@innoboost.io
               <br />
-              Address: 123 Innovation Street, Tech City
+              Address: Victoria House, Office D, Suite 21/22, 26 Main Street,
+              Gibraltar, GX11 1AA
             </p>
           </section>
         </div>

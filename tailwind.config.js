@@ -5,12 +5,12 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#06b6d4",
-          dark: "#0891b2",
+          DEFAULT: "#0066FF",
+          dark: "#0052CC",
         },
         accent: {
-          DEFAULT: "#fb923c",
-          dark: "#ea580c",
+          DEFAULT: "#00B8D9",
+          dark: "#0095B3",
         },
       },
       backgroundImage: {

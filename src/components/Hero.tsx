@@ -4,62 +4,67 @@ import { HashLink } from "react-router-hash-link";
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen flex items-center overflow-hidden pt-20">
+    <div className="relative min-h-screen flex items-center overflow-hidden pt-20 bg-gradient-to-b from-slate-50 to-slate-100">
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="text-left">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Transform Your Marketing with
-              <span className="block gradient-text mt-2">
-                Cutting-Edge Technology
-              </span>
-            </h1>
-
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              AI-driven solutions, data insights, and automation that scale your
-              marketing efforts.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-start gap-4">
-              <HashLink
-                smooth
-                to="/#contact"
-                className="px-8 py-4 bg-gradient-to-r from-primary to-accent text-white rounded-full hover:opacity-90 transition flex items-center space-x-2 text-lg font-semibold shadow-lg w-full sm:w-auto justify-center"
-              >
-                <span>Get Started Today</span>
-                <ArrowRight className="w-5 h-5" />
-              </HashLink>
-
-              <HashLink
-                smooth
-                to="/#services"
-                className="px-8 py-4 glass-card text-white rounded-full hover:bg-white/20 transition text-lg font-semibold w-full sm:w-auto text-center"
-              >
-                Learn More
-              </HashLink>
-            </div>
+        <div className="text-center max-w-3xl mx-auto my-16">
+          <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+            InnoBoost is a performance marketing solutions provider
+          </h1>
+          <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+            Empower your marketing efforts with our comprehensive platform
+            designed for modern marketers
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <HashLink
+              smooth
+              to="/#contact"
+              className="px-8 py-4 bg-primary text-white rounded-full hover:bg-primary-dark transition flex items-center space-x-2 text-lg font-semibold w-full sm:w-auto justify-center"
+            >
+              <span>Get Started Today</span>
+              <ArrowRight className="w-5 h-5" />
+            </HashLink>
+            <HashLink
+              smooth
+              to="/#features"
+              className="px-8 py-4 text-slate-700 rounded-full hover:bg-slate-100 transition text-lg font-semibold w-full sm:w-auto text-center"
+            >
+              See How It Works
+            </HashLink>
           </div>
+        </div>
 
-          {/* Right Image */}
-          <div className="relative">
-            <div className="aspect-square rounded-2xl overflow-hidden glass-card">
-              <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80"
-                alt="Marketing Innovation"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-tr from-black/50 to-transparent"></div>
+        <div className="relative max-w-5xl mx-auto mb-16">
+          <div className="rounded-2xl overflow-hidden shadow-2xl">
+            <img
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80"
+              alt="Platform Dashboard"
+              className="w-full"
+            />
+          </div>
+          <div className="sm:absolute sm:-bottom-6 sm:left-1/2 sm:transform sm:-translate-x-1/2 max-sm:mt-6">
+            <div className="sm:bg-white border-none sm:rounded-full py-3 px-6 sm:shadow-lg flex flex-col sm:flex-row gap-4 sm:gap-8 min-w-[280px]">
+              <div className="flex items-center gap-2 justify-center">
+                <span className="text-green-500 text-lg">●</span>
+                <span className="text-sm font-medium whitespace-nowrap">
+                  99.9% Uptime
+                </span>
+              </div>
+              <div className="flex items-center gap-2 justify-center">
+                <span className="text-blue-500 text-lg">●</span>
+                <span className="text-sm font-medium whitespace-nowrap">
+                  Real-time Analytics
+                </span>
+              </div>
+              <div className="flex items-center gap-2 justify-center">
+                <span className="text-purple-500 text-lg">●</span>
+                <span className="text-sm font-medium whitespace-nowrap">
+                  24/7 Support
+                </span>
+              </div>
             </div>
-            {/* Decorative Elements */}
-            <div className="absolute -z-10 top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
-            <div className="absolute -z-10 bottom-0 right-0 transform translate-x-1/3 translate-y-1/3 w-48 h-48 bg-accent/20 rounded-full blur-3xl"></div>
           </div>
         </div>
       </div>
-
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-radial from-transparent to-black/90 z-0"></div>
     </div>
   );
 };

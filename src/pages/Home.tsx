@@ -1,27 +1,28 @@
 import React from "react";
 import Hero from "../components/Hero";
 import ServiceCard from "../components/ServiceCard";
+import TestimonialCarousel from "../components/TestimonialCarousel";
 import { services } from "../data/services";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { HashLink } from "react-router-hash-link";
 
 const Home = () => {
   return (
-    <div className="min-h-screen text-white">
+    <div className="min-h-screen bg-white">
       <Hero />
 
-      {/* Services Section */}
-      <section id="services" className="py-20 px-6">
+      {/* Features Section */}
+      <section id="features" className="py-20 px-6 bg-white">
         <div className="container mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            Unlock Your Marketing
-            <span className="block gradient-text">Potential</span>
-          </h2>
-          <p className="text-gray-300 text-center max-w-2xl mx-auto mb-16 text-lg">
-            Our technology solutions revolutionize marketing through AI-driven
-            insights, automation, and cutting-edge tools that deliver measurable
-            results.
-          </p>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Everything you need to scale your marketing
+            </h2>
+            <p className="text-lg text-slate-600">
+              Powerful features to help you manage, analyze, and optimize your
+              marketing efforts
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
@@ -31,287 +32,236 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-20 px-6">
+      {/* Solutions Section */}
+      <section id="solutions" className="py-20 px-6 bg-slate-50">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-8">
-                Why Our Clients
-                <span className="block gradient-text">Trust Us</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                Boost your marketing performance
               </h2>
+              <p className="text-lg text-slate-600 mb-8">
+                Our platform provides everything you need to optimize your
+                marketing operations and drive better results.
+              </p>
 
-              <div className="grid gap-6">
+              <div className="space-y-4">
                 {[
-                  "Cutting-edge AI and machine learning solutions",
-                  "Custom-tailored services to meet specific needs",
-                  "Data-driven decisions that deliver results",
-                  "Scalable solutions that grow with you",
-                  "24/7 support and ongoing optimization",
-                  "Industry-leading expertise and innovation",
+                  "Real-time analytics and reporting",
+                  "Automated lead distribution",
+                  "Smart campaign optimization",
+                  "Partner management tools",
+                  "Integration with major platforms",
+                  "Advanced security features",
                 ].map((feature, index) => (
-                  <div
-                    key={index}
-                    className="glass-card p-4 rounded-xl flex items-start space-x-4"
-                  >
+                  <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
-                    <span className="text-gray-300">{feature}</span>
+                    <span className="text-slate-700">{feature}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
-              <div className="space-y-6">
-                <div className="h-64 glass-card rounded-2xl overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80"
-                    alt="AI Technology"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="h-48 glass-card rounded-2xl overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80"
-                    alt="Team Collaboration"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              <div className="space-y-6 pt-12">
-                <div className="h-48 glass-card rounded-2xl overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80"
-                    alt="Business Meeting"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="h-64 glass-card rounded-2xl overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&q=80"
-                    alt="Data Analytics"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&q=80"
+                  alt="Platform Features"
+                  className="w-full"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-6">
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-20 px-6 bg-white">
         <div className="container mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            Choose Your
-            <span className="block gradient-text">Perfect Plan</span>
-          </h2>
-          <p className="text-gray-300 text-center max-w-2xl mx-auto mb-16 text-lg">
-            Select the perfect plan that suits your business needs and scale
-            your marketing efforts with our AI-powered solutions.
-          </p>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Trusted by marketing teams worldwide
+            </h2>
+            <p className="text-lg text-slate-600">
+              See what our customers have to say about their experience with
+              InnoBoost
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            {/* Get Started Plan */}
-            <div className="glass-card rounded-2xl p-8 relative group hover:scale-105 transition duration-300 flex flex-col">
-              <div>
-                <div className="text-sm text-gray-400 mb-4">
-                  Get started plan
+          <TestimonialCarousel />
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 px-6 bg-slate-50">
+        <div className="container mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Simple, transparent pricing
+            </h2>
+            <p className="text-lg text-slate-600">
+              Choose the plan that best fits your needs
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                name: "Essential",
+                price: "$777",
+                description:
+                  "Prompt launch of a partner program with all necessary features included",
+                features: [
+                  "Dedicated Tracking Domain: 1 URL + 1 SSL",
+                  "Unlimited offers and campaigns",
+                  "Dedicated Onboarding manager",
+                  "Different types of tracking",
+                  "Real-time reporting",
+                  "Customizable dashboards",
+                  "Basic fraud prevention",
+                  "Marketplace with 3rd party integrations",
+                  "Full-access API",
+                  "Portal customization",
+                  "2 hours onboarding sessions",
+                  "Email support",
+                ],
+                cta: "Request a Demo",
+                conversions: "Up to 50K conversions",
+              },
+              {
+                name: "Scale",
+                price: "$1,200",
+                description:
+                  "More space for rapid program scale and significant revenue growth",
+                features: [
+                  "Dedicated Tracking Domain: 5 URLs + 5 SSL",
+                  "Unlimited offers and campaigns",
+                  "Dedicated Onboarding manager",
+                  "Different types of tracking",
+                  "Real-time reporting",
+                  "Customizable dashboards",
+                  "Basic fraud prevention",
+                  "Marketplace with 3rd party integrations",
+                  "Full-access API",
+                  "Portal customization",
+                  "4 hours onboarding sessions",
+                  "Email support",
+                ],
+                cta: "Request a Demo",
+                conversions: "Up to 100K conversions",
+                popular: true,
+              },
+              {
+                name: "Enterprise",
+                price: "Custom",
+                description:
+                  "Endless customization possibilities to reach the heights",
+                features: [
+                  "Custom dedicated Tracking Domains",
+                  "Unlimited offers and campaigns",
+                  "Dedicated Onboarding manager",
+                  "Different types of tracking",
+                  "Granular targeting",
+                  "Real-time reporting",
+                  "Customizable dashboards",
+                  "Basic fraud prevention",
+                  "Marketplace with 3rd party integrations",
+                  "Full-access API",
+                  "Portal customization",
+                  "Unlimited Onboarding sessions + ongoing sessions & training",
+                  "Dedicated Support: Email, chat, call/zoom support",
+                ],
+                cta: "Contact Us",
+                conversions: "Custom conversions",
+              },
+            ].map((plan, index) => (
+              <div
+                key={index}
+                className={`bg-white rounded-2xl p-8 ${
+                  plan.popular
+                    ? "border-2 border-primary relative"
+                    : "border border-slate-200"
+                }`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm">
+                    Best Choice
+                  </div>
+                )}
+                <h3 className="text-2xl font-bold mb-6">{plan.name}</h3>
+                <p className="text-slate-600 mb-6">{plan.description}</p>
+                <div className="mb-8">
+                  <div className="text-3xl font-bold">{plan.price}</div>
+                  <div className="text-slate-600">{plan.conversions}</div>
                 </div>
-                <h3 className="text-3xl font-bold mb-2">40 hrs</h3>
-                <div className="text-sm text-gray-400 mb-4">/ mo</div>
-                <div className="text-2xl font-bold mb-1">$3200</div>
-                <div className="text-sm text-gray-400 mb-8">$80/hr</div>
                 <ul className="space-y-4 mb-8">
-                  {[
-                    "Basic Analytics Dashboard",
-                    "Email Marketing Setup",
-                    "5 Marketing Campaigns",
-                    "Basic Support",
-                  ].map((feature, index) => (
-                    <li key={index} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 min-w-5 h-5 text-primary" />
-                      <span className="text-gray-300">{feature}</span>
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-600">{feature}</span>
                     </li>
                   ))}
                 </ul>
-              </div>
-              <div className="mt-auto">
-                <HashLink
-                  smooth
-                  to="/#contact"
-                  className="w-full bg-gradient-to-r from-primary to-accent text-white py-3 rounded-xl hover:opacity-90 transition block text-center"
+                <button
+                  className={`w-full py-3 px-6 rounded-full transition ${
+                    plan.popular
+                      ? "bg-primary text-white hover:bg-primary-dark"
+                      : "text-primary border-2 border-primary hover:bg-primary hover:text-white"
+                  }`}
                 >
-                  Get Started
-                </HashLink>
+                  {plan.cta}
+                </button>
               </div>
-            </div>
-
-            {/* Boost Plan */}
-            <div className="glass-card rounded-2xl p-8 relative group hover:scale-105 transition duration-300 flex flex-col">
-              <div>
-                <div className="text-sm text-gray-400 mb-4">Boost plan</div>
-                <h3 className="text-3xl font-bold mb-2">80 hrs</h3>
-                <div className="text-sm text-gray-400 mb-4">/ mo</div>
-                <div className="text-2xl font-bold mb-1">$5600</div>
-                <div className="text-sm text-gray-400 mb-8">$70/hr</div>
-                <ul className="space-y-4 mb-8">
-                  {[
-                    "Advanced Analytics",
-                    "Marketing Automation",
-                    "15 Marketing Campaigns",
-                    "Priority Support",
-                    "Custom Integrations",
-                  ].map((feature, index) => (
-                    <li key={index} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 min-w-5 h-5 text-primary" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-auto">
-                <HashLink
-                  smooth
-                  to="/#contact"
-                  className="w-full bg-gradient-to-r from-primary to-accent text-white py-3 rounded-xl hover:opacity-90 transition block text-center"
-                >
-                  Get Started
-                </HashLink>
-              </div>
-            </div>
-
-            {/* Full Force Plan */}
-            <div className="glass-card rounded-2xl p-8 relative group hover:scale-105 transition duration-300 border-2 border-primary flex flex-col">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-primary to-accent text-white px-4 py-1 rounded-full text-sm">
-                Most Popular
-              </div>
-              <div>
-                <div className="text-sm text-gray-400 mb-4">
-                  Full force plan
-                </div>
-                <h3 className="text-3xl font-bold mb-2">160 hrs</h3>
-                <div className="text-sm text-gray-400 mb-4">/ mo</div>
-                <div className="text-2xl font-bold mb-1">$9600</div>
-                <div className="text-sm text-gray-400 mb-8">$60/hr</div>
-                <ul className="space-y-4 mb-8">
-                  {[
-                    "Full Analytics Suite",
-                    "Advanced AI Automation",
-                    "Unlimited Campaigns",
-                    "24/7 Priority Support",
-                    "Custom Development",
-                    "Strategy Consulting",
-                  ].map((feature, index) => (
-                    <li key={index} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 min-w-5 h-5 text-primary" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-auto">
-                <HashLink
-                  smooth
-                  to="/#contact"
-                  className="w-full bg-gradient-to-r from-primary to-accent text-white py-3 rounded-xl hover:opacity-90 transition block text-center"
-                >
-                  Get Started
-                </HashLink>
-              </div>
-            </div>
-
-            {/* All Inclusive Plan */}
-            <div className="glass-card rounded-2xl p-8 relative group hover:scale-105 transition duration-300 flex flex-col">
-              <div>
-                <div className="text-sm text-gray-400 mb-4">
-                  👑 All inclusive
-                </div>
-                <h3 className="text-3xl font-bold mb-2">Custom</h3>
-                <div className="text-sm text-gray-400 mb-4">/ mo</div>
-                <div className="text-2xl font-bold mb-1">$20K-100K</div>
-                <div className="text-sm text-gray-400 mb-8">/ mo</div>
-                <ul className="space-y-4 mb-8">
-                  {[
-                    "Enterprise Analytics",
-                    "Custom AI Solutions",
-                    "Unlimited Everything",
-                    "Dedicated Team",
-                    "Strategic Partnership",
-                    "White Label Options",
-                    "Custom Development",
-                  ].map((feature, index) => (
-                    <li key={index} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 min-w-5 h-5 text-primary" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-auto">
-                <HashLink
-                  smooth
-                  to="/#contact"
-                  className="w-full bg-gradient-to-r from-primary to-accent text-white py-3 rounded-xl hover:opacity-90 transition block text-center"
-                >
-                  Contact Sales
-                </HashLink>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6">
+      <section id="contact" className="py-20 px-6 bg-white">
         <div className="container mx-auto max-w-4xl">
-          <div className="glass-card rounded-2xl p-8 relative overflow-hidden">
-            <div className="absolute inset-0 overflow-hidden opacity-10">
-              <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80"
-                alt="Contact Background"
-                className="w-full h-full object-cover"
-              />
+          <div className="bg-slate-50 rounded-2xl p-8">
+            <div className="text-center max-w-2xl mx-auto mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                Ready to get started?
+              </h2>
+              <p className="text-lg text-slate-600">
+                Get in touch with us to learn more about how InnoBoost can help
+                your business
+              </p>
             </div>
 
-            <div className="relative">
-              <h2 className="text-4xl md:text-5xl font-bold text-center mb-8">
-                Ready to Scale Your
-                <span className="block gradient-text">Marketing?</span>
-              </h2>
-
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    className="glass-card rounded-xl px-4 py-3 focus:outline-none focus:border-primary border border-white/10"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    className="glass-card rounded-xl px-4 py-3 focus:outline-none focus:border-primary border border-white/10"
-                  />
-                </div>
-
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input
                   type="text"
-                  placeholder="Business Name"
-                  className="w-full glass-card rounded-xl px-4 py-3 focus:outline-none focus:border-primary border border-white/10"
+                  placeholder="Name"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
                 />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                />
+              </div>
 
-                <textarea
-                  placeholder="Message"
-                  rows={4}
-                  className="w-full glass-card rounded-xl px-4 py-3 focus:outline-none focus:border-primary border border-white/10"
-                ></textarea>
+              <input
+                type="text"
+                placeholder="Company"
+                className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+              />
 
-                <button className="w-full bg-gradient-to-r from-primary to-accent text-white py-4 rounded-xl hover:opacity-90 transition flex items-center justify-center space-x-2 text-lg font-semibold">
-                  <span>Contact Us Today</span>
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-              </form>
-            </div>
+              <textarea
+                placeholder="Message"
+                rows={4}
+                className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+              ></textarea>
+
+              <button className="w-full bg-primary text-white py-4 rounded-xl hover:bg-primary-dark transition flex items-center justify-center space-x-2 text-lg font-semibold">
+                <span>Get Started</span>
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </form>
           </div>
         </div>
       </section>

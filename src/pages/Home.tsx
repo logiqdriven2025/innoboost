@@ -52,7 +52,7 @@ const Home = () => {
     message: "",
    });
   } catch (error) {
-   console.error("Failed to send email:", error);
+   console.error("Failed to send email!:", error);
    setSubmitStatus("error");
   } finally {
    setIsSubmitting(false);

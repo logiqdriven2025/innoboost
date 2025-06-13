@@ -142,7 +142,7 @@ const Home = () => {
       {[
        {
         name: "Essential",
-        price: "£777",
+        price: "Custom",
         description:
          "Prompt launch of a partner program with all necessary features included",
         features: [
@@ -164,7 +164,7 @@ const Home = () => {
        },
        {
         name: "Scale",
-        price: "£1,200",
+        price: "Custom",
         description:
          "More space for rapid program scale and significant revenue growth",
         features: [

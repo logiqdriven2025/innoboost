@@ -79,8 +79,8 @@ const Footer = () => {
        </div>
        <div className="flex items-center space-x-3">
         <MapPin className="w-5 min-w-5 h-5 text-primary" />
-        <span>InnoSphere Ltd.
-         Victoria House, Offics D, Suite 21/22, 26 Main Street, Gibraltar GX11 1AA</span>
+        <span>InnoSphere Ltd.</span>
+        </span>Victoria House, Offics D, Suite 21/22, 26 Main Street, Gibraltar GX11 1AA</span>
        </div>
       </div>
      </div>

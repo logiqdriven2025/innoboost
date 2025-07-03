@@ -1,4 +1,10 @@
+import { useEffect } from "react";
+
 const Terms = () => {
+ useEffect(() => {
+  window.scrollTo(0, 0);
+ }, []);
+
  return (
   <div className="min-h-screen pt-24 pb-6 bg-white">
    <div className="container mx-auto px-6">
@@ -6,7 +12,7 @@ const Terms = () => {
      <h1 className="text-4xl font-bold mb-8 text-primary">Terms of Service</h1>
 
      <p className="text-slate-600 mb-2">
-      Effective Date: {new Date().toLocaleDateString()}
+      Effective Date: {new Date().toLocaleDateString("en-GB")}
      </p>
 
      <p className="mb-8 text-slate-600">
@@ -104,12 +110,12 @@ const Terms = () => {
         Payments are due in full within the timeline specified on the invoice
        </li>
        <li>Late payments may incur interest or suspension of services</li>
-       <li>
-        All prices are exclusive of VAT or applicable taxes, unless stated
-        otherwise InnoBoost reserves the right to modify pricing with prior
-        written notice.
-       </li>
       </ul>
+      <p className="mb-4">
+       All prices are exclusive of VAT or applicable taxes, unless stated
+       otherwise InnoBoost reserves the right to modify pricing with prior
+       written notice.
+      </p>
      </section>
 
      <section>

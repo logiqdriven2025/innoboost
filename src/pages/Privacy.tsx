@@ -1,4 +1,10 @@
+import { useEffect } from "react";
+
 const Privacy = () => {
+ useEffect(() => {
+  window.scrollTo(0, 0);
+ }, []);
+
  return (
   <div className="min-h-screen pt-24 pb-6 bg-white">
    <div className="container mx-auto px-6">
@@ -6,18 +12,21 @@ const Privacy = () => {
      <h1 className="text-4xl font-bold mb-8 text-primary">Privacy Policy</h1>
 
      <p className="text-slate-600 mb-2">
-      Effective Date: {new Date().toLocaleDateString()}
+      Effective Date: {new Date().toLocaleDateString("en-GB")}
      </p>
-     <p className="mb-8 text-slate-600">
+     <p className="mb-4 text-slate-600">
       This Privacy Policy describes how <strong>InnoSphere Ltd.</strong> –
       operator of the <strong>InnoBoost</strong> website and related services –
       collect, uses, shares, and safeguards your personal information when you
       engage with us – whether through our website, digital communications, or
-      business relationships. We are committed to handling your personal data
-      with transparency, care, and in accordance with applicable data protection
-      laws, including the <strong>Gibraltar Data Protection Act 2004</strong>{" "}
-      and the <strong>EU General Data Protection Regulation (GDPR)</strong>{" "}
-      where relevant.
+      business relationships.
+     </p>
+     <p className="mb-8 text-slate-600">
+      We are committed to handling your personal data with transparency, care,
+      and in accordance with applicable data protection laws, including the{" "}
+      <strong>Gibraltar Data Protection Act 2004</strong> and the{" "}
+      <strong>EU General Data Protection Regulation (GDPR)</strong> where
+      relevant.
      </p>
      <section>
       <h2 className="text-lg font-semibold mb-2 text-slate-900">
@@ -73,9 +82,11 @@ const Privacy = () => {
        <li>Ensuring website performance, usability, and security</li>
        <li>
         Complying with applicable legal obligations or regulatory requirements
-        We never sell or rent your personal data to third parties.
        </li>
       </ul>
+      <p className="text-slate-600 mb-4">
+       We never sell or rent your personal data to third parties
+      </p>
      </section>
 
      <section>
@@ -101,6 +112,10 @@ const Privacy = () => {
         present more relevant advertising
        </li>
       </ul>
+      <p className="text-slate-600 mb-4">
+       You can manage your cookie preferences at any time through your browser
+       settings or via our cookie consent tool.
+      </p>
      </section>
 
      <section>
@@ -185,14 +200,14 @@ const Privacy = () => {
        personal information from unauthorized access, disclosure, alteration, or
        destruction. These include:
       </p>
-      <ul className="list-disc list-inside text-slate-600 space-y-2">
+      <ul className="list-disc list-inside text-slate-600 space-y-2 mb-4">
        <li>Encrypted data storage and transmission</li>
        <li>Access control and authentication mechanisms</li>
        <li>Secure server infrastructure and system monitoring</li>
       </ul>
       <p className="text-slate-600 mb-4">
-       We take all necessary steps to ensure your data is handled securely and
-       in line with this Privacy Policy.
+       While we strive to use commercially acceptable means to protect your
+       data, no method of transmission or storage is completely secure.
       </p>
      </section>
 
@@ -228,8 +243,11 @@ const Privacy = () => {
        <li>
         <strong>Lodge a complaint</strong> with the{" "}
         <strong>Gibraltar Regulatory Authority (GRA)</strong> if you believe
-        your rights have been violated To exercise any of your rights, please
-        contact us using the details provided below.
+        your rights have been violated
+       </li>
+       <li>
+        To exercise any of your rights, please contact us using the details
+        provided below.
        </li>
       </ul>
      </section>
@@ -237,9 +255,9 @@ const Privacy = () => {
       <h2 className="text-lg font-semibold mb-2 text-slate-900">
        9. Contact Us
       </h2>
-      <p className="text-slate-600 mb-4">
-       We take all necessary steps to ensure your data is handled securely and
-       in line with this Privacy Policy.
+      <p className="text-slate-600">
+       If you have questions, concerns, or requests regarding this Privacy
+       Policy or how your data is handled, you can contact us at:
       </p>
       <p className="text-slate-600">
        <strong>Email</strong>: office@innoboost.io

@@ -35,10 +35,10 @@ const Header = () => {
        </HashLink>
        <HashLink
         smooth
-        to="/#pricing"
+        to="/#packages"
         className="text-slate-600 hover:text-primary transition"
        >
-        Pricing
+        Packages
        </HashLink>
       </div>
 
@@ -82,11 +82,11 @@ const Header = () => {
        </HashLink>
        <HashLink
         smooth
-        to="/#pricing"
+        to="/#packages"
         className="text-slate-600 hover:text-primary transition"
         onClick={closeMenu}
        >
-        Pricing
+        Packages
        </HashLink>
        <HashLink
         smooth

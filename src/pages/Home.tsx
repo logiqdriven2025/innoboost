@@ -126,12 +126,12 @@ const Home = () => {
     </div>
    </section>
 
-   {/* Pricing Section */}
-   <section id="pricing" className="py-20 px-6 bg-slate-50">
+   {/* Packages Section */}
+   <section id="packages" className="py-20 px-6 bg-slate-50">
     <div className="container mx-auto">
      <div className="text-center max-w-3xl mx-auto mb-16">
       <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-       Simple, transparent pricing
+       Simple, transparent packages
       </h2>
       <p className="text-lg text-slate-600">
        Choose the plan that best fits your needs
@@ -142,70 +142,79 @@ const Home = () => {
       {[
        {
         name: "Essential",
-        price: "Custom",
         description:
          "Prompt launch of a partner program with all necessary features included",
         features: [
-         "Dedicated Tracking Domain: 1 URL + 1 SSL",
-         "Unlimited offers and campaigns",
-         "Dedicated Onboarding manager",
-         "Different types of tracking",
+         "Up to 50,000 monthly conversions",
+         "1–5 included users",
+         "1 dedicated tracking domain + SSL",
+         "Unlimited offers & campaigns",
+         "Dedicated onboarding manager",
+         "Multiple tracking methods",
          "Real-time reporting",
          "Customizable dashboards",
          "Basic fraud prevention",
-         "Marketplace with 3rd party integrations",
-         "Full-access API",
-         "Portal customization",
-         "2 hours onboarding sessions",
+         "5 third-party integrations",
+         "Full API access + webhooks",
+         "Basic portal customization",
+         "Basic campaign optimisation",
+         "Automated lead distribution",
+         "Core partner management",
+         "Security & access controls",
+         "2 hours training included",
          "Email support",
         ],
-        cta: "Request a Demo",
-        conversions: "Up to 50K conversions",
        },
        {
         name: "Scale",
-        price: "Custom",
         description:
          "More space for rapid program scale and significant revenue growth",
         features: [
-         "Dedicated Tracking Domain: 5 URLs + 5 SSL",
-         "Unlimited offers and campaigns",
-         "Dedicated Onboarding manager",
-         "Different types of tracking",
+         "Up to 100,000 monthly conversions",
+         "6–10 included users",
+         "5 dedicated tracking domains + SSL",
+         "Unlimited offers & campaigns",
+         "Dedicated onboarding manager",
+         "Multiple tracking methods",
          "Real-time reporting",
          "Customizable dashboards",
-         "Basic fraud prevention",
-         "Marketplace with 3rd party integrations",
-         "Full-access API",
-         "Portal customization",
-         "4 hours onboarding sessions",
-         "Email support",
+         "Enhanced fraud prevention",
+         "10 third-party integrations",
+         "Full API access + webhooks",
+         "Themed portal templates",
+         "Intermediate campaign optimization",
+         "Automated lead distribution",
+         "Extended partner management",
+         "Security & access controls",
+         "4 hours training included",
+         "Email + chat support",
         ],
-        cta: "Request a Demo",
-        conversions: "Up to 100K conversions",
         popular: true,
        },
        {
         name: "Enterprise",
-        price: "Custom",
         description: "Endless customization possibilities to reach the heights",
         features: [
-         "Custom dedicated Tracking Domains",
-         "Unlimited offers and campaigns",
-         "Dedicated Onboarding manager",
-         "Different types of tracking",
-         "Granular targeting",
-         "Real-time reporting",
-         "Customizable dashboards",
-         "Basic fraud prevention",
-         "Marketplace with 3rd party integrations",
-         "Full-access API",
-         "Portal customization",
-         "Unlimited Onboarding sessions + ongoing sessions & training",
-         "Dedicated Support: Email, chat, call/zoom support",
+         "From 100,000+ monthly conversions",
+         "Up to 30 included users",
+         "Custom tracking domains + SSL",
+         "Unlimited offers & campaigns",
+         "Dedicated onboarding manager",
+         "Multiple tracking methods",
+         "Advanced real-time dashboards",
+         "Fully configurable dashboards",
+         "Advanced fraud prevention",
+         "20 third-party integrations",
+         "Priority API access + webhooks",
+         "Full branding & UI support",
+         "Granular targeting & segmentation",
+         "Advanced campaign optimization",
+         "Advanced lead distribution logic",
+         "Full partner management suite",
+         "Enterprise-grade security",
+         "Unlimited training sessions",
+         "Priority support (all channels)",
         ],
-        cta: "Contact Us",
-        conversions: "Custom conversions",
        },
       ].map((plan, index) => (
        <div
@@ -223,10 +232,6 @@ const Home = () => {
         )}
         <h3 className="text-2xl font-bold mb-6">{plan.name}</h3>
         <p className="text-slate-600 mb-6">{plan.description}</p>
-        <div className="mb-8">
-         <div className="text-3xl font-bold">{plan.price}</div>
-         <div className="text-slate-600">{plan.conversions}</div>
-        </div>
         <ul className="space-y-4 mb-8">
          {plan.features.map((feature, i) => (
           <li key={i} className="flex items-start gap-2">
@@ -235,15 +240,6 @@ const Home = () => {
           </li>
          ))}
         </ul>
-        <button
-         className={`w-full py-3 px-6 rounded-full transition ${
-          plan.popular
-           ? "bg-primary text-white hover:bg-primary-dark"
-           : "text-primary border-2 border-primary hover:bg-primary hover:text-white"
-         }`}
-        >
-         {plan.cta}
-        </button>
        </div>
       ))}
      </div>
@@ -313,7 +309,7 @@ const Home = () => {
          isSubmitting ? "opacity-75 cursor-not-allowed" : ""
         }`}
        >
-        <span>{isSubmitting ? "Sending" : "Get Started"}</span>
+        <span>{isSubmitting ? "Sending" : "Get in touch"}</span>
         <ArrowRight className="w-5 h-5" />
        </button>
        {submitStatus === "success" && (

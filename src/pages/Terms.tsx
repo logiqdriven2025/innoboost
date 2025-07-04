@@ -111,7 +111,7 @@ const Terms = () => {
        </li>
        <li>Late payments may incur interest or suspension of services</li>
       </ul>
-      <p className="mb-4">
+      <p className="text-slate-600 mb-4">
        All prices are exclusive of VAT or applicable taxes, unless stated
        otherwise InnoBoost reserves the right to modify pricing with prior
        written notice.

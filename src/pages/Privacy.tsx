@@ -56,11 +56,6 @@ const Privacy = () => {
         (collected via cookies and similar technologies)
        </li>
       </ul>
-      <p className="text-slate-600 mb-4">
-       We may collect personal information directly from you, through your
-       interactions with our services, or automatically via website usage. This
-       may include:
-      </p>
      </section>
 
      <section>
@@ -245,11 +240,11 @@ const Privacy = () => {
         <strong>Gibraltar Regulatory Authority (GRA)</strong> if you believe
         your rights have been violated
        </li>
-       <li>
-        To exercise any of your rights, please contact us using the details
-        provided below.
-       </li>
       </ul>
+      <p className="text-slate-600 mb-4">
+       To exercise any of your rights, please contact us using the details
+       provided below.
+      </p>
      </section>
      <section>
       <h2 className="text-lg font-semibold mb-2 text-slate-900">

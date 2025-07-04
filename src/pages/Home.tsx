@@ -37,12 +37,22 @@ const Home = () => {
   setSubmitStatus("idle");
 
   try {
+   // 1. Send enquiry to office email
    await emailjs.sendForm(
     import.meta.env.VITE_EMAILJS_SERVICE_ID,
-    import.meta.env.VITE_EMAILJS_TEMPLATE_ID_BOOK,
+    import.meta.env.VITE_EMAILJS_TEMPLATE_ID_OFFICE, // new template for office
     formRef.current,
     import.meta.env.VITE_EMAILJS_PUBLIC_KEY
    );
+
+   // 2. Send auto-reply to user
+   await emailjs.sendForm(
+    import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    import.meta.env.VITE_EMAILJS_TEMPLATE_ID_BOOK, // existing template for user
+    formRef.current,
+    import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+   );
+
    setSubmitStatus("success");
    formRef.current.reset();
    setFormData({

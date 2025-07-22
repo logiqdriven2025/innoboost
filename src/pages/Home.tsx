@@ -108,9 +108,7 @@ const Home = () => {
     "Protect your data, users, and systems with cutting-edge security protocols.",
   },
  };
- const [expandedFeature, setExpandedFeature] = useState<string | null>(
-  Object.keys(titles)[0]
- );
+ const [expandedFeature, setExpandedFeature] = useState<string | null>(null);
  const keyFeatures: Record<
   string,
   { icon: JSX.Element; title: string; description: string }[]
@@ -477,7 +475,9 @@ const Home = () => {
                   : "hover:bg-slate-100"
                 }
               `}
-          onClick={() => setExpandedFeature(feature)}
+          onClick={() =>
+           setExpandedFeature(expandedFeature === feature ? null : feature)
+          }
          >
           <CheckCircle
            className={`w-6 h-6 ${

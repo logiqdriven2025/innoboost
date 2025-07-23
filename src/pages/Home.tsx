@@ -423,6 +423,9 @@ const Home = () => {
   "Advanced security features": [],
  };
 
+ // Remove 'popular' property from packages and add state for selected package
+ const [selectedPackage, setSelectedPackage] = useState<number | null>(null);
+
  return (
   <div className="min-h-screen bg-white">
    <Hero />
@@ -683,7 +686,6 @@ const Home = () => {
          "4 hours training included",
          "Email + chat support",
         ],
-        popular: true,
        },
        {
         name: "Enterprise",
@@ -713,15 +715,16 @@ const Home = () => {
       ].map((plan, index) => (
        <div
         key={index}
-        className={`bg-white rounded-2xl p-8 ${
-         plan.popular
-          ? "border-2 border-primary relative"
+        className={`bg-white rounded-2xl p-8 transition cursor-pointer ${
+         selectedPackage === index
+          ? "border-2 border-primary relative shadow-lg"
           : "border border-slate-200"
         }`}
+        onClick={() => setSelectedPackage(index)}
        >
-        {plan.popular && (
+        {selectedPackage === index && (
          <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm">
-          Best Choice
+          {index === 1 ? "Best Choice" : "Selected"}
          </div>
         )}
         <h3 className="text-2xl font-bold mb-6">{plan.name}</h3>

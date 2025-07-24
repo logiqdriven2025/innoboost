@@ -11,6 +11,8 @@ import {
  FileText,
  Database,
  Brain,
+ ChevronRight,
+ ChevronDown,
 } from "lucide-react";
 const Home = () => {
  const [isSubmitting, setIsSubmitting] = useState(false);
@@ -488,11 +490,16 @@ const Home = () => {
            }`}
           />
           <span
-           className={`font-medium text-lg ${
+           className={`font-medium text-lg flex items-center gap-2 ${
             expandedFeature === feature ? "text-primary" : "text-slate-800"
            }`}
           >
            {feature}
+           {expandedFeature === feature ? (
+            <ChevronDown className="w-6 h-6 text-primary transition-transform" />
+           ) : (
+            <ChevronRight className="w-6 h-6 text-slate-400 transition-transform" />
+           )}
           </span>
          </li>
         ))}

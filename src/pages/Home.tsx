@@ -477,7 +477,7 @@ const Home = () => {
                 ${
                  expandedFeature === feature
                   ? "bg-primary/10 border-l-4 border-primary shadow"
-                  : "hover:bg-slate-100"
+                  : "hover:bg-primary/10 hover:text-primary hover:shadow-md"
                 }
               `}
           onClick={() =>
@@ -486,7 +486,9 @@ const Home = () => {
          >
           <CheckCircle
            className={`w-6 h-6 ${
-            expandedFeature === feature ? "text-primary" : "text-slate-400"
+            expandedFeature === feature
+             ? "text-primary"
+             : "text-slate-400 group-hover:text-primary"
            }`}
           />
           <span
